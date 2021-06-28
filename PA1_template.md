@@ -306,13 +306,15 @@ Do these values differ from the estimates from the first part of the assignment?
 What is the impact of imputing missing data on the estimates of the total daily number of steps?
 
 ```r
-knitr::kable(compareAvg, "simple")
+##knitr::kable(compareAvg, "simple")
 ```
+
 
                    Mean   Median
 ------------  ---------  -------
 With_NAs       10766.19    10765
 Without_NAs    10765.64    10762
+
 
 
 The new mean and median are slightly lower than the original values, but not significantly. 

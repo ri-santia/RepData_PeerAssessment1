@@ -329,33 +329,13 @@ FullmeanTotalSteps</code></pre>
 <pre><code>## [1] 10765.64</code></pre>
 <pre class="r"><code>FullmedianTotalSteps</code></pre>
 <pre><code>## [1] 10762</code></pre>
-<p>We generate a table to compare the mean and median values.</p>
+<p>Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?</p>
 <pre class="r"><code>Mean &lt;- c(With_NAs = MeanTotalSteps, Without_NAs = FullmeanTotalSteps)
 Median &lt;- c(With_NAs = MedianTotalSteps, Without_NAs = FullmedianTotalSteps)
-compareAvg &lt;- data.frame(Mean, Median)</code></pre>
-<p>Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?</p>
-<pre class="r"><code>##knitr::kable(compareAvg, &quot;simple&quot;)</code></pre>
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th align="right">Mean</th>
-<th align="right">Median</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>With_NAs</td>
-<td align="right">10766.19</td>
-<td align="right">10765</td>
-</tr>
-<tr class="even">
-<td>Without_NAs</td>
-<td align="right">10765.64</td>
-<td align="right">10762</td>
-</tr>
-</tbody>
-</table>
+data.frame(Mean, Median)</code></pre>
+<pre><code>##                 Mean Median
+## With_NAs    10766.19  10765
+## Without_NAs 10765.64  10762</code></pre>
 <p>The new mean and median are slightly lower than the original values, but not significantly. The Histograms present an activity pattern similar to the original data with missing values.</p>
 </div>
 <div id="are-there-differences-in-activity-patterns-between-weekdays-and-weekends" class="section level2">

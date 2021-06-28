@@ -294,28 +294,22 @@ FullmedianTotalSteps
 ```
 ## [1] 10762
 ```
-We generate a table to compare the mean and median values.
-
-```r
-Mean <- c(With_NAs = MeanTotalSteps, Without_NAs = FullmeanTotalSteps)
-Median <- c(With_NAs = MedianTotalSteps, Without_NAs = FullmedianTotalSteps)
-compareAvg <- data.frame(Mean, Median)
-```
 
 Do these values differ from the estimates from the first part of the assignment? 
 What is the impact of imputing missing data on the estimates of the total daily number of steps?
 
+
 ```r
-##knitr::kable(compareAvg, "simple")
+Mean <- c(With_NAs = MeanTotalSteps, Without_NAs = FullmeanTotalSteps)
+Median <- c(With_NAs = MedianTotalSteps, Without_NAs = FullmedianTotalSteps)
+data.frame(Mean, Median)
 ```
 
-
-                   Mean   Median
-------------  ---------  -------
-With_NAs       10766.19    10765
-Without_NAs    10765.64    10762
-
-
+```
+##                 Mean Median
+## With_NAs    10766.19  10765
+## Without_NAs 10765.64  10762
+```
 
 The new mean and median are slightly lower than the original values, but not significantly. 
 The Histograms present an activity pattern similar to the original data with missing values.
@@ -352,7 +346,7 @@ gDf <- ggplot(FullMeanDayActivityData, aes(x=interval, y=steps))
 gDf + geom_line(col="red")+xlab("Time Interval")+ylab("Average Steps")+ggtitle("Average Steps for Day")+facet_grid(Day ~ .)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-22-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-21-1.png)<!-- -->
 
 During the weekdays the highest step activity occurs in the morning, between intervals 500 and 1000 (5 -  10 in the morning), 
 with less activity during the day.

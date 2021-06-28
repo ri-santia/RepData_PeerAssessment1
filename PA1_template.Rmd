@@ -146,19 +146,15 @@ FullmedianTotalSteps <- median(FullsumActivityData$totalSteps, na.rm = TRUE)
 FullmeanTotalSteps
 FullmedianTotalSteps
 ```
-We generate a table to compare the mean and median values.
-```{r}
-Mean <- c(With_NAs = MeanTotalSteps, Without_NAs = FullmeanTotalSteps)
-Median <- c(With_NAs = MedianTotalSteps, Without_NAs = FullmedianTotalSteps)
-compareAvg <- data.frame(Mean, Median)
-```
 
 Do these values differ from the estimates from the first part of the assignment? 
 What is the impact of imputing missing data on the estimates of the total daily number of steps?
+
 ```{r}
-##knitr::kable(compareAvg, "simple")
+Mean <- c(With_NAs = MeanTotalSteps, Without_NAs = FullmeanTotalSteps)
+Median <- c(With_NAs = MedianTotalSteps, Without_NAs = FullmedianTotalSteps)
+data.frame(Mean, Median)
 ```
-`r knitr::kable(compareAvg, "simple")`
 
 The new mean and median are slightly lower than the original values, but not significantly. 
 The Histograms present an activity pattern similar to the original data with missing values.

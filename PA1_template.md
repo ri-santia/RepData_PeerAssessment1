@@ -166,7 +166,7 @@ gm <- ggplot(MeanActivityData, aes(x=interval, y=avgSteps))
 gm + geom_line(col="red")+xlab("Interval")+ylab("Average Steps")+ggtitle("Average Steps per 5 minute intervals")
 ```
 
-![](PA1_template_files/figure-html/MeanActivityPlot -1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
 
 Which 5-minute interval, on average across all the days in the data set, contains the maximum number of steps?
 
@@ -273,7 +273,7 @@ Fg <- ggplot(FullsumActivityData, aes(totalSteps))
 Fg + geom_histogram(boundary = 0, binwidth = 1000, col="blue", fill="cyan") + ggtitle("Total Steps per Day") + xlab("Total Steps") + ylab("Count")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-16-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-17-1.png)<!-- -->
 We calculate the mean and median total number of steps taken per day. 
 
 
@@ -350,7 +350,7 @@ gDf <- ggplot(FullMeanDayActivityData, aes(x=interval, y=steps))
 gDf + geom_line(col="red")+xlab("Time Interval")+ylab("Average Steps")+ggtitle("Average Steps for Day")+facet_grid(Day ~ .)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-21-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-22-1.png)<!-- -->
 
 During the weekdays the highest step activity occurs in the morning, between intervals 500 and 1000 (5 -  10 in the morning), 
 with less activity during the day.

@@ -75,7 +75,7 @@ head(MeanActivityData)
 ```
 
 Now we can plot the average number of steps per interval, across all days
-```{r MeanActivityPlot , fig.height=4}
+```{r , fig.height=4}
 gm <- ggplot(MeanActivityData, aes(x=interval, y=avgSteps))
 gm + geom_line(col="red")+xlab("Interval")+ylab("Average Steps")+ggtitle("Average Steps per 5 minute intervals")
 ```
